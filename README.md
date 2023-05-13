@@ -16,7 +16,7 @@ sudo apt install libjpeg-dev python3-dev
 
 ### Setting pytorch project
 
-This will clone the pytorch project on your home folder, create and assing it a venv, and tune it for ROCm.  
+This will clone the pytorch project on your home folder, create and assign it a venv, and tune it for a ROCm compilation.  
 
 ````
 cd ~
