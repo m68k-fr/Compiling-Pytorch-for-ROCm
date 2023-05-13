@@ -4,7 +4,7 @@
 ### Install needed dependencies
 
 * ROCm must be installed, (use the **rocminfo** command to check your version)  
-* If ROCm is missing, please refer to this guide for instructions: [https://github.com/m68k-fr/Auto1111-Shark-Ubuntu-AMD-Howto](gg)
+* If ROCm is missing, please refer to this guide for instructions: [Auto1111-AMD-ROCm](https://github.com/m68k-fr/Auto1111-Shark-Ubuntu-AMD-Howto)
 
 
 ````
