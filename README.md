@@ -83,7 +83,7 @@ source venv/bin/activate
 # Uninstall the old torch packages
 pip uninstall torch torchvision
 # Install torch official packages
-pip install ~/pytorch/dist/torch-your-torch-compiled-package-name.whl
+pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm5.4.2
 ````
 
 
