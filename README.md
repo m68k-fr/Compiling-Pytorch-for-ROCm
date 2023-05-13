@@ -49,14 +49,15 @@ A whl pytorch package file should be available in the dist folder.
 
 ### Getting and building vision
 
-Clone the pytorchvision project, compile and build a whl package.  
+Clone the torchvision project, compile and build a whl package.  
 Please note, we're using the venv from the main pytorch project compiled in the previous step.
 
 ````
 cd ~/pytorch
 source venv/bin/activate
 cd ~
-git clone --recursive https://github.com/pytorch/pytorch
+git clone --recursive https://github.com/pytorch/vision
+cd vision
 BUILD_TEST=0 USE_CUDA=0 USE_CUDNN=0 USE_ROCM=1 python setup.py bdist_wheel
 ````
 
