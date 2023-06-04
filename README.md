@@ -59,7 +59,7 @@ https://github.com/pytorch/pytorch/wiki/PyTorch-Versions
 cd ~/pytorch
 source venv/bin/activate
 cd ~
-git clone --recursive b- v0.15.2 https://github.com/pytorch/vision
+git clone --recursive -b v0.15.2 https://github.com/pytorch/vision
 cd vision
 BUILD_TEST=0 USE_CUDA=0 USE_CUDNN=0 USE_ROCM=1 python setup.py bdist_wheel
 ````
