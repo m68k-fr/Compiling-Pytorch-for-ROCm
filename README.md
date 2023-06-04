@@ -20,7 +20,7 @@ This will clone the pytorch project on your home folder, create and assign it a 
 
 ````
 cd ~
-git clone --recursive https://github.com/pytorch/pytorch
+git clone --recursive -b v2.0.1 https://github.com/pytorch/pytorch
 cd pytorch
 python -m venv venv
 source venv/bin/activate
@@ -34,7 +34,7 @@ python tools/amd_build/build_amd.py
 
 ### Building pytorch
 
-Compile the project, install it in your pytorch venv, and build a whl package.
+Compile the the latest pytorch release, install it in your pytorch venv, and build a whl package.
 
 ````
 # set CMAKE_PREFIX_PATH
@@ -49,14 +49,17 @@ A whl pytorch package file should be available in the dist folder.
 
 ### Getting and building vision
 
-Clone the torchvision project, compile and build a whl package.  
+Clone the torchvision latest release for your pytorch version, compile it and build a whl package.  
 Please note, we're using the venv from the main pytorch project compiled in the previous step.
+
+To identify the compatible vision release for your pytorch version, use this chart:  
+https://github.com/pytorch/pytorch/wiki/PyTorch-Versions
 
 ````
 cd ~/pytorch
 source venv/bin/activate
 cd ~
-git clone --recursive https://github.com/pytorch/vision
+git clone --recursive b- v0.15.2 https://github.com/pytorch/vision
 cd vision
 BUILD_TEST=0 USE_CUDA=0 USE_CUDNN=0 USE_ROCM=1 python setup.py bdist_wheel
 ````
