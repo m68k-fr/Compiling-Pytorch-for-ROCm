@@ -11,6 +11,14 @@
 sudo apt install clang cmake libjpeg-dev python3-dev
 ````
 
+### ROCm 5.6 patch for compiling torch
+
+If you're using ROCm5.6, you will need to patch it for compiling pytorch:
+
+````
+sudo cp /opt/rocm-5.6.0/include/rccl/rccl.h /opt/rocm-5.6.0/include/rccl.h
+````
+
 
 ### Setting pytorch project
 
