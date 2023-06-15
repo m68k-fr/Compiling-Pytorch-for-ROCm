@@ -1,10 +1,10 @@
-# Compiling Pytorch for ROCm on Ubuntu22.04
+# Compiling Pytorch for ROCm on Ubuntu 22.04.02 LTS
 
 
 ### Install needed dependencies
 
 * ROCm must be installed, (use the **rocminfo** command to check your version)  
-* If ROCm is missing, please refer to this guide for instructions: [Auto1111-AMD-ROCm](https://github.com/m68k-fr/Auto1111-Shark-Ubuntu-AMD-Howto)
+* If ROCm is missing, please refer to this guide for instructions: [Auto1111-AMD-ROCm](https://github.com/m68k-fr/Auto1111-Ubuntu-AMD-Howto)
 
 
 ````
@@ -13,7 +13,7 @@ sudo apt install clang cmake libjpeg-dev python3-dev
 
 ### ROCm 5.6 patch for compiling torch
 
-If you're using ROCm5.6, you will need to patch it for compiling pytorch:
+If you're using the hidden ROCm5.6 version, you will need to patch it for compiling pytorch:
 
 ````
 sudo cp /opt/rocm-5.6.0/include/rccl/rccl.h /opt/rocm-5.6.0/include/rccl.h
@@ -95,5 +95,17 @@ pip uninstall torch torchvision
 # Install torch official packages
 pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm5.4.2
 ````
+
+### Compliling the nightly version:
+
+If you prefer to build the latest code (nightly) instead of pytorch v2.0.1 and vision v0.15.2, just remove the -b option when git cloning projects.
+
+**Latest SHA commits tested with success for ROCm5.6 (June 15th):**
+* pytorch: 3e9eaa1a123c7f0a2313be8523557b34b9d0008c
+* vision: 8324c481dd4c3096697332d76fbdc9d912f7360b
+  
+
+
+
 
 
