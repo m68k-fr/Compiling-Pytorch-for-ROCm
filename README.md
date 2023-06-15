@@ -8,9 +8,7 @@
 
 
 ````
-sudo apt install clang
-sudo apt install cmake
-sudo apt install libjpeg-dev python3-dev
+sudo apt install clang cmake libjpeg-dev python3-dev
 ````
 
 
